@@ -23,6 +23,8 @@ namespace Editor.Tools
 				if (fullName != null && !fullName.Contains(@namespace))
 					continue;
 			
+				Debug.Log(fullName);
+				Debug.Log(@namespace);
 				Debug.LogError("Field: " + field.Name + " " +
 				               "From Script: " + behaviour.GetType().FullName  + " " +
 				               "On: " + gameObject + " " +

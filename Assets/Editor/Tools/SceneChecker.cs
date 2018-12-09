@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEditor;
@@ -9,7 +10,9 @@ using UnityEngine.SceneManagement;
 namespace Editor.Tools
 {
 	public class SceneChecker : EditorWindow 
-	{ 		
+	{
+		private string @namespace = "test";
+
 		[MenuItem("Tools/Scene Check")]
 		private static void Init()
 		{
@@ -18,10 +21,8 @@ namespace Editor.Tools
 		}
 		
 		public void OnGUI()
-		{	
-			GUILayout.Label("namespace");
-			var @namespace = EditorGUILayout.TextField("Test");
-			
+		{
+			@namespace = EditorGUILayout.TextField("namespace", @namespace);
 			if (GUILayout.Button("Check Scene for Not Set Serialized Fields..."))
 			{
 				Checks.Clear();
