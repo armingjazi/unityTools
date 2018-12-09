@@ -2,7 +2,7 @@
 
 namespace UnityTools.IntegrationTest
 {
-	public class SerializedFieldNotSetTestCase : MonoBehaviour
+	public class SerializedFieldTestCase : MonoBehaviour
 	{
 		[SerializeField] private GameObject notSetGameObject;
 	}	
