@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Editor.Tools
+namespace UnityTools.src
 {
 	public interface ICheck
 	{

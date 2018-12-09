@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using UnityEngine;
 
-namespace Editor.Tools
+namespace UnityTools.src
 {
 	public class SerializedFieldSetCheck : ICheck
 	{
@@ -23,8 +23,6 @@ namespace Editor.Tools
 				if (fullName != null && !fullName.Contains(@namespace))
 					continue;
 			
-				Debug.Log(fullName);
-				Debug.Log(@namespace);
 				Debug.LogError("Field: " + field.Name + " " +
 				               "From Script: " + behaviour.GetType().FullName  + " " +
 				               "On: " + gameObject + " " +
